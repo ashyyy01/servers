@@ -1,0 +1,21 @@
+server:
+  port: 8085
+spring:
+  application:
+    name: config serever
+  cloud:
+    config:
+      server:
+        git:
+          uri: http://gitlab.kgfsl.com/cbos/cbos-config.git
+          username: agent
+          password: Kgisl@12345
+eureka:
+  instance:
+    prefer-ip-address: false
+#    hostname: 10.100.4.197
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
